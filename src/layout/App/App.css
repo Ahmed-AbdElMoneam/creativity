@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'DIN Next LT Arabic';
+	src: url('../../configs/fonts/DINNextLTArabic-Regular.woff2') format('woff2'),
+			url('../../configs/fonts/DINNextLTArabic-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'DIN Next LT Arabic', sans-serif;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.range {
+  flex: auto;
+  margin-right: 20px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.flex-fill {
+  flex: 0 0 100%;
+}
+
+.fill {
+  width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.input__style{
+  height: 56px;
+  font-size: 16px;
+}
+
+.form-button{
+  display: inline-block;
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+}

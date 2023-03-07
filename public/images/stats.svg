@@ -1,0 +1,17 @@
+<svg id="Frame" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Frame_clip_mask_" data-name="Frame (clip mask)" width="64" height="64" rx="20" fill="none"/>
+    </clipPath>
+  </defs>
+  <rect id="Frame_clip_mask_2" data-name="Frame (clip mask)" width="64" height="64" rx="20" fill="none"/>
+  <g id="Frame-2" data-name="Frame" clip-path="url(#clip-path)">
+    <g id="Frame_clip_group_" data-name="Frame (clip group)" transform="translate(16 16)">
+      <rect id="Frame_style_" data-name="Frame (style)" width="64" height="64" rx="20" transform="translate(-16 -16)" fill="#c4d0fb"/>
+      <path id="Rectangle_844" data-name="Rectangle 844" d="M8,0H54a0,0,0,0,1,0,0V58a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V8A8,8,0,0,1,8,0Z" fill="#fff"/>
+      <rect id="Rectangle_853" data-name="Rectangle 853" width="6" height="32" rx="3" transform="translate(9 24)" fill="#6a5ae0"/>
+      <rect id="Rectangle_854" data-name="Rectangle 854" width="6" height="47" rx="3" transform="translate(21 20)" fill="#c4d0fb"/>
+      <rect id="Rectangle_855" data-name="Rectangle 855" width="6" height="41" rx="3" transform="translate(33 16)" fill="#6a5ae0"/>
+    </g>
+  </g>
+</svg>
