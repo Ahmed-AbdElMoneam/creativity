@@ -134,7 +134,7 @@ const Register = () => {
           </Form.Item>
 
           <Form.Item className='login__buttons'>
-            <Link to="/">
+            <Link to="/login">
               <Button type="primary" htmlType="submit" className="form-button">
                 تسجيل
               </Button>

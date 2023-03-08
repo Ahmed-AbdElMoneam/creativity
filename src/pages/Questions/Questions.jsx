@@ -67,7 +67,6 @@ const questions_arr = [
 const Questions = () => {
   let question = {};
   const { stageId, questionId } = useParams();
-  console.log(stageId, questionId)
   questions_arr.filter((elem) => (elem.id === Number(questionId) && elem.stage_id === Number(stageId))).map((elem) => question = elem )
   return (
     <Question

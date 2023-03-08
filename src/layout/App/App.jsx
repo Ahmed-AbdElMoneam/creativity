@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ConfigProvider } from "antd";
 import "antd/dist/reset.css";
 import {
@@ -16,6 +17,12 @@ import PrivateRoutes from "../../utils/PrivateRoutes";
 import Confirmation from "../../pages/Confirmation";
 
 function App() {
+  const[token, setToken] = useState(false);
+
+  const handleLogin = (isPermitted) => {
+    isPermitted ? setToken(true) : setToken(false)
+  }
+
   return (
     <ConfigProvider
       locale={arEG}
@@ -29,9 +36,9 @@ function App() {
     >
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login handleLogin={handleLogin} />} />
           <Route path="/register" element={<Register />} />
-          <Route element={<PrivateRoutes/>}>
+          <Route element={<PrivateRoutes token={token} />}>
             <Route path="/" element={<Home />} />
             <Route path="/stages/:stageId" element={<Stages />} />
             <Route path="/stages/:stageId/questions/:questionId" element={<Questions />} />

@@ -2,11 +2,17 @@
 import { Button, Checkbox, Form, Input, Card } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import config from '../../configs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = ({ handleLogin }) => {
+	const navigate = useNavigate();
 	const onFinish = (values) => {
-		console.log('Success:', values);
+		if(values.username === "ahmed"){
+			handleLogin(true)
+			navigate("/")
+		}else{
+			handleLogin(false)
+		}
 	};
 
 	return (
@@ -67,11 +73,9 @@ const Login = () => {
 					</Form.Item>
 
 					<Form.Item className='login__buttons'>
-						<Link to="/">
-							<Button type="primary" htmlType="submit" className="form-button">
-								سجل الدخول
-							</Button>
-						</Link>
+						<Button type="primary" htmlType="submit" className="form-button">
+							سجل الدخول
+						</Button>
 						<Link to="/register">ليس لديك حساب !</Link>
 					</Form.Item>
 				</Form>
