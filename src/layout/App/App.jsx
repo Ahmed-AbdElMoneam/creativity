@@ -15,6 +15,8 @@ import Stages from "../../pages/Stages";
 import Questions from "../../pages/Questions";
 import PrivateRoutes from "../../utils/PrivateRoutes";
 import Confirmation from "../../pages/Confirmation";
+import FAQ from "../../pages/FAQ";
+import Settings from "../../pages/Settings";
 
 function App() {
   const[token, setToken] = useState(false);
@@ -43,6 +45,8 @@ function App() {
             <Route path="/stages/:stageId" element={<Stages />} />
             <Route path="/stages/:stageId/questions/:questionId" element={<Questions />} />
             <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
