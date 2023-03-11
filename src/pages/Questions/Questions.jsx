@@ -76,6 +76,7 @@ const Questions = () => {
       qusestion_info={question.qusestion_info}
       question_img={question.question_img}
       next_page={question.next_page}
+      key={question.id}
     />
   );
 }

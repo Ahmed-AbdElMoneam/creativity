@@ -1,12 +1,35 @@
 import { Layout, Col, Row, Button } from 'antd';
+import Icon, { SettingOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
-const { Footer, Content } = Layout;
+import UserAvatar from '../../utils/Images/UserAvatar';
+const { Header, Footer, Content } = Layout;
 
 const Details = ({ part, title, no_questions, type, description, question_id }) => {
   return (
     <Layout className='home__layout'>
+      <Header className="home__header">
+        <Row>
+          <Col span={2} className='header__logo'>
+            <Link style={{ display: 'inline-block', marginRight: '32px' }} to="/">
+              <img width={70} src="/images/logo_light.svg" alt="logo" />
+            </Link>
+          </Col>
+          <Col span={5} className='header__title'>
+            <Link to="/" className='header__title' style={{ height: '100%' }}>
+              <span className='header__title__span'>نسبة الإبداع</span>
+              <span className='header__title__span'>Creativity Quotient</span>
+            </Link>
+          </Col>
+          <Col className='header__user' span={7} offset={10}>
+            <Link to="/faq" className='header__user__faq'>الأسئلة المتكررة</Link>
+            <Icon component={UserAvatar} />
+            <p className='header__username'>هناء المشاري</p>
+            <Link to="/settings" className='header__user__settings'><SettingOutlined /></Link>
+          </Col>
+        </Row>
+      </Header>
       <Content className="details__content__wrapper">
-        <img width={800} src="/images/details.svg" alt="details" />
+        <img width={700} src="/images/details.svg" alt="details" />
       </Content>
       <Footer className='details__footer__wrapper'>
         <div>

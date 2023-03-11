@@ -1,6 +1,6 @@
 .home__layout{
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: radial-gradient(
     circle at 13% 47%,
     rgba(140, 140, 140, 0.03) 0%,
@@ -56,14 +56,14 @@
 .details__content__wrapper{
   text-align: center;
   color: #fff;
-  height: 40vh;
+  height: 21.3vh;
 }
 
 .details__footer__wrapper{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 95vw;
+  width: 95%;
   height: 60vh;
   margin: 0 auto;
   background-color: #fff;

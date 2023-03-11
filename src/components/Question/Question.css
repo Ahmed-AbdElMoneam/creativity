@@ -53,6 +53,16 @@
   linear-gradient(90deg, #6A5AE0, #785FDC);
 }
 
+.question__header{
+  height: 15vh;
+  width: 100vw;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+}
+
 .question__content__wrapper{
   text-align: center;
   color: #fff;

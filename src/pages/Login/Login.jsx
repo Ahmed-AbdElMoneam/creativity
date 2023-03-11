@@ -1,22 +1,24 @@
-// import { Button, Card, Form } from "antd";
-import { Button, Checkbox, Form, Input, Card } from 'antd';
+import { Button, Checkbox, Form, Input, Card, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import config from '../../configs';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ handleLogin }) => {
 	const navigate = useNavigate();
+	const [messageApi, contextHolder] = message.useMessage();
 	const onFinish = (values) => {
-		if(values.username === "ahmed"){
+		if(values.username === "admin@creativity.com"){
 			handleLogin(true)
 			navigate("/")
 		}else{
+			messageApi.info('من فضلك تأكد من إدخال البريد الإلكتروني و كلمة المرور بشكل صحيح');
 			handleLogin(false)
 		}
 	};
 
 	return (
 		<div className="auth__wrapper">
+			{contextHolder}
 			<div className="auth__logo">
 				<img
 					src={config.APP_LOGO_PATH}

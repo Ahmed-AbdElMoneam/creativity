@@ -21,7 +21,7 @@ const Home = () => {
             </Link>
           </Col>
           <Col className='header__user' span={7} offset={10}>
-            <Link to="/faq" className='header__user__faq'>الأسئلة الشائعة</Link>
+            <Link to="/faq" className='header__user__faq'>الأسئلة المتكررة</Link>
             <Icon component={UserAvatar} />
             <p className='header__username'>هناء المشاري</p>
             <Link to="/settings" className='header__user__settings'><SettingOutlined /></Link>
