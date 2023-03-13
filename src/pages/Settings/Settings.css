@@ -53,25 +53,6 @@
   linear-gradient(90deg, #fff, #fff);
 }
 
-.settings__button{
-  width: 327px;
-  height: 85px;
-  background-color: #EFEEFC;
-}
-
-.settings__button__title{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.settings__switch{
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-
 .settings__logout{
   font-size: 18px;
   color: #EB5757;

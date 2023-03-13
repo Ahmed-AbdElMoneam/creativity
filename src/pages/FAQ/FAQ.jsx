@@ -1,33 +1,12 @@
 import { Layout, Col, Row, Card, Collapse } from 'antd';
-import Icon from '@ant-design/icons';
-import { Link } from 'react-router-dom';
-import UserAvatar from '../../utils/Images/UserAvatar';
-const { Footer, Content, Header } = Layout;
+import HeaderLayout from '../../layout/HeaderLayout';
+const { Footer, Content } = Layout;
 const { Panel } = Collapse;
 
 const FAQ = () => {
   return (
     <Layout className='faq__layout'>
-      <Header className="faq__header">
-        <Row>
-          <Col span={2} className='header__logo'>
-            <Link style={{ display: 'inline-block', marginRight: '32px' }} to="/">
-              <img width={70} src="/images/logo_dark.svg" alt="logo" />
-            </Link>
-          </Col>
-          <Col span={5} className='header__title'>
-            <Link to="/" className='header__title' style={{ height: '100%' }}>
-              <span className='faq__header__title__span'>نسبة الإبداع</span>
-              <span className='faq__header__title__span'>Creativity Quotient</span>
-            </Link>
-          </Col>
-          <Col className='header__user' span={6} offset={11}>
-            <Link to="/" className='header__user__home'>الرئيسية</Link>
-            <Icon component={UserAvatar} />
-            <p className='faq__header__username'>هناء المشاري</p>
-          </Col>
-        </Row>
-      </Header>
+      <HeaderLayout theme="dark"/>
       <Content className="faq__content" style={{ color: '#fff' }}>
         <Row>
           <Col span={24} className='faq__main__title'>

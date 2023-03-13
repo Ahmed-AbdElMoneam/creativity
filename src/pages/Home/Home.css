@@ -1,118 +1,16 @@
 .home__layout{
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(
-    circle at 13% 47%,
-    rgba(140, 140, 140, 0.03) 0%,
-    rgba(140, 140, 140, 0.03) 25%,
-    transparent 25%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 28% 63%,
-    rgba(143, 143, 143, 0.03) 0%,
-    rgba(143, 143, 143, 0.03) 16%,
-    transparent 16%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 81% 56%,
-    rgba(65, 65, 65, 0.03) 0%,
-    rgba(65, 65, 65, 0.03) 12%,
-    transparent 12%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 26% 48%,
-    rgba(60, 60, 60, 0.03) 0%,
-    rgba(60, 60, 60, 0.03) 6%,
-    transparent 6%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 97% 17%,
-    rgba(150, 150, 150, 0.03) 0%,
-    rgba(150, 150, 150, 0.03) 56%,
-    transparent 56%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 50% 100%,
-    rgba(25, 25, 25, 0.03) 0%,
-    rgba(25, 25, 25, 0.03) 36%,
-    transparent 36%,
-    transparent 100%
-  ),
-  radial-gradient(
-    circle at 55% 52%,
-    rgba(69, 69, 69, 0.03) 0%,
-    rgba(69, 69, 69, 0.03) 6%,
-    transparent 6%,
-    transparent 100%
-  ),
-  linear-gradient(90deg, #6A5AE0, #785FDC);
-}
-
-.home__header{
-  height: 15vh;
-  width: 100vw;
-  margin-bottom: 1.5rem;
-  background-color: transparent;
-  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
-  -webkit-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
-  -moz-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
-}
-
-.header__logo{
-  margin-top: 2px;
-}
-
-.header__title{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.header__title__span{
-  color: white;
-  font-size: 32px;
-  line-height: 30px;
-}
-
-.header__user{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.header__user__faq{
-  color: white;
-  font-size: 1.2rem;
-}
-
-.header__user__faq:hover, .header__user__faq:focus{
-  color: rgb(255, 237, 237);
-}
-
-.header__user__settings{
-  color: white;
-  font-size: 1.2rem;
-  margin-right: 20px;
-}
-.header__user__settings:hover, .header__user__settings:focus{
-  color: rgb(255, 208, 208);
-}
-
-.header__username{
-  font-size: 1.2rem;
-  margin-top: 16px;
-  color: white;
+  overflow-y: auto;
+  background-image: url(../../../public/images/bg.png);
+  background-position: bottom;
+  background-size: cover;
 }
 
 .home__content{
-  width: 85vw;
-  height: 52.3vh;
+  width: 95vw;
   margin: 0px auto;
+  color: white;
 }
 
 .home__main__title{
@@ -127,27 +25,26 @@
 }
 
 .home__footer__wrapper{
-  text-align: right;
-  color: black;
+  width: 30vw;
+  text-align: center;
   padding: 0;
-  border-radius: 32px 32px 0 0;
-  overflow: hidden;
+  border-radius: 15px;
+  margin: 5px auto;
 }
 
-.home__footer{
-  width: 100vw;
-  height: 29vh;
-  margin: 0px auto;
+.home__footer .ant-card-head-title{
+  font-size: 24px;
 }
 
 .home__footer__button{
-  width: 240px;
-  height: 85px;
+  width: 300px;
+  height: 110px;
 }
 
-.home__footer__button__style{
+.home__footer__button__title{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  line-height: 30px;
 }

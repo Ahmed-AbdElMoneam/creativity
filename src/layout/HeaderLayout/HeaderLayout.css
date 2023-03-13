@@ -1,0 +1,49 @@
+.layout__header{
+  height: 98px;
+  width: 97vw;
+  margin: 0px auto;
+  margin-bottom: 0.7rem;
+  background-color: var(--header-color);
+  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.header__menu{
+  color: white;
+  background-color: #FF8FA2;
+  height: 80%;
+  margin-bottom: 1px;
+}
+
+.header__menu a{
+  font-size: 1.5vw;
+}
+
+.header__user{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__faq, .header__username, .header__settings{
+  color: white;
+  font-size: 1.2rem;
+}
+
+.header__username{
+  margin-top: 16px;
+}
+
+.header__settings{
+  margin-right: 20px;
+}
+
+.header__faq:hover, .header__settings:hover{
+  color: rgb(36, 102, 71);
+}
+.header__faq:focus, .header__settings:focus{
+  color: rgb(241, 81, 94);
+}

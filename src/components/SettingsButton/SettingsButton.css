@@ -1,0 +1,12 @@
+.settings__button{
+  width: 327px;
+  height: 85px;
+  background-color: #EFEEFC;
+}
+
+.settings__button__title{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

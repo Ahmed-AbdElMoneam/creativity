@@ -1,0 +1,28 @@
+.header__logo{
+  display: inline-block;
+  margin: 2px 32px 0 0;
+}
+
+.header__title{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header__title__span__ar{
+  font-size: 42px;
+  line-height: 30px;
+  font-family: 'Circle Book';
+}
+
+.header__title__span__en{
+  font-size: 24px;
+  line-height: 30px;
+  font-family: 'Circle';
+}
+
+.header__title__span__letter{
+  font-size: 24px;
+  font-family: 'Circle Book';
+}

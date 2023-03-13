@@ -6,6 +6,27 @@
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+  font-family: 'Circle Book';
+  src: url('../../configs/fonts/Circle-Book.woff2') format('woff2'),
+      url('../../configs/fonts/Circle-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Circle';
+  src: url('../../configs/fonts/Circle-Light.woff2') format('woff2'),
+      url('../../configs/fonts/Circle-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #6A5AE0;
+  --header-color: #FF8FA2;
+}
 
 * {
   margin: 0;
@@ -73,5 +94,8 @@ html {
   display: inline-block;
   width: 100%;
   height: 56px;
-  font-size: 16px;
+}
+
+.form-button span{
+  font-size: 1.5vw;
 }
