@@ -1,12 +1,37 @@
-import { Layout, Col, Row, Switch } from 'antd';
-import { Link } from 'react-router-dom';
+import { Layout, Col, Row, Switch, message } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
 import HeaderLayout from '../../layout/HeaderLayout';
 import SettingsButton from '../../components/SettingsButton';
+import { logout_api } from '../../API';
+import axios from "axios";
 const { Content } = Layout;
 
-const Settings = () => {
+const Settings = ({ token, userEmail }) => {
+  const navigate = useNavigate();
+  const [messageApi, contextHolder] = message.useMessage();
+
+  const handleLogOut = () => {
+    axios.get(logout_api,{
+      headers: { 
+        Authorization: `Bearer ${token}`
+      },
+    })
+		.then((response) => {
+      if(response.data.success){
+        navigate("/login");
+        sessionStorage.removeItem("session_token")
+        document.cookie = "session_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+			}else{
+				messageApi.info("تعذر تسجيل خروجك. حاول مرة أخرى !");
+			}
+		}).catch((err) => {
+			console.log(err.message);
+		});
+  }
+
   return (
     <Layout className='settings__layout'>
+      {contextHolder}
       <HeaderLayout theme="dark"/>
       <Content className="faq__content" style={{ color: '#fff' }}>
         <Row>
@@ -21,7 +46,7 @@ const Settings = () => {
         </Row>
         <Row style={{ marginBottom: '6vh' }}>
           <SettingsButton image="user_settings.svg" title="تعديل الملف الشخصي" description="تعديل اسم المستخدم, البلد, أخرى"/>
-          <SettingsButton image="email_settings.svg" title="تعديل البريد الإلكتروني" description="madias@yahoo.com"/>
+          <SettingsButton image="email_settings.svg" title="تعديل البريد الإلكتروني" description={userEmail}/>
           <SettingsButton image="password_settings.svg" title="تغيير كلمة المرور" description="أخر تغيير كان منذ سنه"/>
         </Row>
         <Row style={{ marginBottom: '1rem' }}>
@@ -41,7 +66,7 @@ const Settings = () => {
         </Row>
         <Row>
           <Col span={24} style={{ textAlign: 'center' }}>
-            <Link to="/login" className='settings__logout'>
+            <Link className='settings__logout' onClick={handleLogOut}>
               تسجيل الخروج
             </Link>
           </Col>

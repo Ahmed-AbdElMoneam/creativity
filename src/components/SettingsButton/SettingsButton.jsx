@@ -10,8 +10,8 @@ const SettingsButton = ({ image, title, description }) => {
             <img src={`/images/${image}`} alt="" />
           </Col>
           <Col span={14} className='settings__button__title'>
-            <span style={{ fontSize: '18px' }}>{ title }</span>
-            <span style={{ fontSize: '12px', color: '#858494' }}>{ description }</span>
+            <span style={{ fontSize: '1.5vw' }}>{ title }</span>
+            <span style={{ fontSize: '1vw', color: '#858494' }}>{ description }</span>
           </Col>
           <Col span={4} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
             <LeftOutlined />

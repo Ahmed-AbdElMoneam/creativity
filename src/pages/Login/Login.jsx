@@ -2,18 +2,42 @@ import { Button, Checkbox, Form, Input, Card, message } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import config from '../../configs';
 import { Link, useNavigate } from 'react-router-dom';
+import { login_api } from '../../API';
+import axios from "axios";
 
 const Login = ({ handleLogin }) => {
 	const navigate = useNavigate();
 	const [messageApi, contextHolder] = message.useMessage();
+
 	const onFinish = (values) => {
-		if(values.username === "admin@creativity.com"){
-			handleLogin(true)
-			navigate("/")
-		}else{
-			messageApi.info('من فضلك تأكد من إدخال البريد الإلكتروني و كلمة المرور بشكل صحيح');
-			handleLogin(false)
-		}
+		axios.post(login_api,{
+			user_email: values.username,
+			user_password: values.password,
+		},
+		{
+			headers: {
+				'Content-Type': 'multipart/form-data'
+			},
+		})
+		.then((response) => {
+			if(response.data.success){
+				messageApi.success(response.data.message);
+				handleLogin(response.data.data.token, values.remember)
+				setTimeout(() => {
+          navigate("/")
+        }, 1500)
+			}else if(response.data.message === "form_validation"){
+				messageApi.info('من فضلك تأكد من إدخال البريد الإلكتروني و كلمة المرور بشكل صحيح');
+				sessionStorage.removeItem("session_token")
+				document.cookie = "session_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+			}else{
+				messageApi.warning(response.data.message);
+				sessionStorage.removeItem("session_token")
+				document.cookie = "session_token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+			}
+		}).catch((err) => {
+			console.log(err.message);
+		});
 	};
 
 	return (
@@ -57,7 +81,7 @@ const Login = ({ handleLogin }) => {
 							},
 						]}
 					>
-						<Input
+						<Input.Password
 							className='input__style'
 							prefix={<LockOutlined className="site-form-item-icon" />}
 							type="password"
@@ -68,10 +92,6 @@ const Login = ({ handleLogin }) => {
 						<Form.Item name="remember" valuePropName="checked" noStyle>
 							<Checkbox>تذكرني</Checkbox>
 						</Form.Item>
-
-						<a className="login-form-forgot" href="">
-							نسيت كلمة مرورك ؟
-						</a>
 					</Form.Item>
 
 					<Form.Item className='login__buttons'>

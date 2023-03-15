@@ -1,9 +1,10 @@
 import { Layout, Col, Row, Menu } from 'antd';
-import { useState } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Icon, { SettingOutlined, QuestionOutlined, HomeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import UserAvatar from '../../utils/Images/UserAvatar';
 import Logo from '../../components/Logo';
+import { UsernameContext } from '../App/App';
 const { Header } = Layout;
 
 const items = [
@@ -26,6 +27,8 @@ const items = [
 const HeaderLayout = ({ theme }) => {
   const currentMenuItem = window.location.pathname.substring(1) ? window.location.pathname.substring(1) : 'home'
   const [current, setCurrent] = useState(currentMenuItem);
+  const userName = useContext(UsernameContext);
+
   const onClick = (e) => {
     setCurrent(e.key);
   };
@@ -40,7 +43,7 @@ const HeaderLayout = ({ theme }) => {
         </Col>
         <Col className='header__user' span={4} offset={3}>
           <Icon component={UserAvatar} />
-          <p className='header__username'>هناء المشاري</p>
+          <p className='header__username'>{userName}</p>
         </Col>
       </Row>
     </Header>
