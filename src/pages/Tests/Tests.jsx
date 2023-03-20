@@ -77,8 +77,8 @@ const Tests = ({ token, userId }) => {
               </Col>
             )
           })}
-          {!isLoading && !tests && <p style={{ fontSize: '40px' }}>لا توجد لديك أي تقارير</p>}
           {isLoading && <LoadingOutlined className="loading__icon" style={{ height: '600px' }} />}
+          {!isLoading && !tests[0] && <p style={{ fontSize: '40px' }}>لا توجد لديك أي تقارير</p>}
         </Row>
       </Content>
     </Layout>
