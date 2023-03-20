@@ -97,5 +97,9 @@ html {
 }
 
 .form-button span{
-  font-size: 1.5vw;
+  font-size: 22px;
+}
+
+.loading__icon svg{
+  font-size: 120px !important;
 }

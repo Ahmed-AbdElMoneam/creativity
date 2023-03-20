@@ -40,7 +40,7 @@ const Settings = ({ token, userEmail }) => {
           </Col>
         </Row>
         <Row>
-          <Col span={24} style={{ color: 'rgb(133, 132, 148)', fontSize: '2vw', marginBottom: '1rem' }}>
+          <Col span={24} style={{ color: 'rgb(133, 132, 148)', fontSize: '24px', marginBottom: '1rem' }}>
             الحساب
           </Col>
         </Row>
@@ -49,23 +49,18 @@ const Settings = ({ token, userEmail }) => {
           <SettingsButton image="email_settings.svg" title="تعديل البريد الإلكتروني" description={userEmail}/>
           <SettingsButton image="password_settings.svg" title="تغيير كلمة المرور" description="أخر تغيير كان منذ سنه"/>
         </Row>
-        <Row style={{ marginBottom: '1rem' }}>
-          <Col span={12} style={{ color: 'rgb(133, 132, 148)', fontSize: '2vw', marginBottom: '1rem' }}>
-            أخرى
+        <Row style={{ marginBottom: '3vh' }}>
+          <Col md={{ span: 12 }} span={24} style={{ color: 'rgb(133, 132, 148)', marginBottom: '1rem' }}>
+            <p style={{ fontSize: '24px' }}>أخرى</p>
+            <SettingsButton image="difficulty_settings.svg" title="تغيير الصعوبة" description="سهل, متوسط, صعب"/>
           </Col>
-          <Col span={12} style={{ color: 'rgb(133, 132, 148)', fontSize: '2vw', marginBottom: '1rem' }}>
-            الإشعارات
-          </Col>
-        </Row>
-        <Row style={{ marginBottom: '3rem' }}>
-          <SettingsButton image="difficulty_settings.svg" title="تغيير الصعوبة" description="سهل, متوسط, صعب"/>
-          {/* <SettingsButton image="faq_settings.svg" title="الأسئلة المتكررة" description="الأسئلة الأكثر تكرارا"/> */}
-          <Col span={2} offset={4}>
+          <Col md={{ span: 12 }} span={24} style={{ color: 'rgb(133, 132, 148)', fontSize: '2vw', marginBottom: '1rem' }}>
+            <p style={{ fontSize: '24px' }}>الإشعارات</p>
             <Switch defaultChecked />
           </Col>
         </Row>
         <Row>
-          <Col span={24} style={{ textAlign: 'center' }}>
+          <Col span={24} style={{ textAlign: 'center', marginBottom: '3vh' }}>
             <Link className='settings__logout' onClick={handleLogOut}>
               تسجيل الخروج
             </Link>

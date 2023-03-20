@@ -1,10 +1,9 @@
-const UserAvatar = () => {
+const FemaleAvatar = () => {
   return (
     <svg
       id="Avatar"
       xmlns="http://www.w3.org/2000/svg"
-      width="64"
-      height="64"
+      style={{ width: "65px", height: "65px" }}
       viewBox="0 0 56 56"
     >
       <defs>
@@ -368,4 +367,4 @@ const UserAvatar = () => {
   );
 };
 
-export default UserAvatar;
+export default FemaleAvatar;

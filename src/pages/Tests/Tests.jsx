@@ -57,17 +57,17 @@ const Tests = ({ token, userId }) => {
           </Col>
         </Row>
         <Row style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          {!isLoading && tests.map((test, index) => {
+          {!isLoading && tests && tests.map((test, index) => {
             return(
-              <Col span={8} style={{ textAlign: 'center' }} key={index}>
+              <Col xl={{ span: 8 }} md={{ span: 12 }} span={24} style={{ textAlign: 'center' }} key={index}>
                 <Button className='tests__button' onClick={() => handleDownload(test.id)}>
                   <Row>
                     <Col span={6}>
                       <img src={`/images/document.svg`} alt="" />
                     </Col>
                     <Col span={14} className='settings__button__title'>
-                      <span style={{ fontSize: '1.5vw' }}>{`تقرير ${index+1}`}</span>
-                      <span style={{ fontSize: '1vw', color: '#858494' }}>{`التاريخ: ${test.date_added}`}</span>
+                      <span style={{ fontSize: '21px' }}>{`تقرير ${index+1}`}</span>
+                      <span style={{ fontSize: '14px', color: '#858494' }}>{`التاريخ: ${test.date_added}`}</span>
                     </Col>
                     <Col span={4} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <DownloadOutlined />
@@ -77,7 +77,8 @@ const Tests = ({ token, userId }) => {
               </Col>
             )
           })}
-          {isLoading && <LoadingOutlined className="loading__icon" />}
+          {!isLoading && !tests && <p style={{ fontSize: '40px' }}>لا توجد لديك أي تقارير</p>}
+          {isLoading && <LoadingOutlined className="loading__icon" style={{ height: '600px' }} />}
         </Row>
       </Content>
     </Layout>

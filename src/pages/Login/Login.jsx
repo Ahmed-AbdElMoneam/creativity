@@ -47,9 +47,8 @@ const Login = ({ handleLogin }) => {
 				<img
 					src={config.APP_LOGO_PATH}
 					alt="LOGO"
-					width="200"
-					height="200"
-					style={{ marginRight: '1rem' }}
+					width="220"
+					height="220"
 				/>
 			</div>
 			<Card title="تسجيل الدخول" className='login__card'>
@@ -88,10 +87,8 @@ const Login = ({ handleLogin }) => {
 							placeholder="أدخل كلمة المرور"
 						/>
 					</Form.Item>
-					<Form.Item className='login__props'>
-						<Form.Item name="remember" valuePropName="checked" noStyle>
-							<Checkbox>تذكرني</Checkbox>
-						</Form.Item>
+					<Form.Item name="remember" valuePropName="checked" className='login__props'>
+						<Checkbox>تذكرني</Checkbox>
 					</Form.Item>
 
 					<Form.Item className='login__buttons'>

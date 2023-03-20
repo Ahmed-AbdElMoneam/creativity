@@ -4,12 +4,12 @@ import { Col } from 'antd';
 const Logo = ({ image, theme }) => {
   return (
     <>
-      <Col span={2}>
+      <Col span={1}>
         <Link className='header__logo' to="/">
-          <img width={70} src={`/images/${image}`} alt="logo" />
+          <img style={{ width: '5.1vw', minWidth: '70px' }} src={`/images/${image}`} alt="logo" />
         </Link>
       </Col>
-      <Col span={5}>
+      <Col span={6} className='logo__title'>
         <Link className='header__title' style={{ color: theme === 'light' ? 'white' : '#49465F' }} to="/">
           <span className='header__title__span__ar'>نسبة الإبداع</span>
 

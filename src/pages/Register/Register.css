@@ -8,12 +8,13 @@
 }
 
 .reg__logo{
-  margin: 2rem 0;
+  margin: 5vh 0;
 }
 
 .reg__card{
-  width: 30vw;
-  margin-bottom: 3rem;
+  width: 40vw;
+  min-width: 350px;
+  margin-bottom: 8vh;
 }
 
 .reg__card .ant-card-body{
@@ -21,11 +22,11 @@
 }
 
 .reg__card .ant-card-head-title{
-  font-size: 1.5vw;
+  font-size: 24px;
 }
 
 .reg__card label{
-  font-size: 1.3vw !important;
+  font-size: 20px !important;
 }
 
 .input__style .ant-select-selector{

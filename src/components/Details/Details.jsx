@@ -8,7 +8,7 @@ const Details = ({ part, title, no_questions, type, description, question_id }) 
     <Layout className='details__layout'>
       <HeaderLayout theme="light" />
       <Content className="details__content__wrapper">
-        <img width={700} src="/images/details.svg" alt="details" />
+        <img src="/images/details.svg" alt="details" />
       </Content>
       <Footer className='details__footer__wrapper'>
         <div>
@@ -19,11 +19,11 @@ const Details = ({ part, title, no_questions, type, description, question_id }) 
             </Col>
           </Row>
           <Row>
-            <Col className='details__footer__info info__rightBorder' span={6} offset={6}>
+            <Col className='details__footer__info info__rightBorder' span={8} offset={4}>
               <img width={50} src="/images/question.svg" alt="question" />
               <p className='details__footer__paragraph'>{no_questions}</p>
             </Col>
-            <Col className='details__footer__info info__leftBorder' span={6}>
+            <Col className='details__footer__info info__leftBorder' span={8}>
               <img width={50} src="/images/puzzle.svg" alt="puzzle" />
               <p className='details__footer__paragraph'>{type}</p>
             </Col>

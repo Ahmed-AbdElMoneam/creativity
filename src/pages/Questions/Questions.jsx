@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import Question from '../../components/Question';
 import { useParams } from "react-router-dom";
 
@@ -61,33 +60,15 @@ const questions_arr = [
     question: "أنظر للشكل أدناه. ما الذي تراه؟ اكتب أكبر عدد من الأشياء التي قد يمثلها هذا الشكل بالنسبة لك. ",
     qusestion_info: "تذكر ... كلما زاد عدد الأفكار الأصيلة والمبتكرة التي يمكنك الإتيان بها كان ذلك أفضل. عندما تستنفذ أفكارك، بإمكانك الانتقال للسؤال التالي",
     question_img: "/images/lines.svg",
-    next_page: "tests",
+    next_page: "confirmation",
   },
 ]
 
-const Questions = () => {
+const Questions = ({ getAnswers, getQuestionId, getTimers }) => {
   let question = {};
   const { stageId, questionId } = useParams();
-  // const[answers, setAnswers] = useState([{id:1,ans:""},{id:2,ans:""},{id:3,ans:""},{id:4,ans:""},{id:5,ans:""},{id:6,ans:""}]);
-
+  getQuestionId(questionId);
   questions_arr.filter((elem) => (elem.id === Number(questionId) && elem.stage_id === Number(stageId))).map((elem) => question = elem )
-
-  // const getAnswer = (answer) => {
-  //   console.log(answer)
-  //   // console.log(e.target.value)
-  //   // setAnswers((prevAnswers) => {
-  //   //   // const new_answer = prevAnswers.filter((answer) => answer.id === question_id).map(answer => {
-  //   //   //   return {id: answer.id, ans: e.target.value}
-  //   //   // })
-  //   //   const prev_answers = prevAnswers.filter((answer) => answer.id !== Number(questionId))
-  //   //   return [...prev_answers, {
-  //   //     id: Number(questionId), 
-  //   //     ans: e.target.value,
-  //   //   }].sort((a,b) => a.id - b.id);
-  //   // })
-  // }
-
-  // console.log(answers)
 
   return (
     <Question
@@ -98,7 +79,8 @@ const Questions = () => {
       question_img={question.question_img}
       next_page={question.next_page}
       question_id={question.id}
-      // getAnswer={getAnswer}
+      getAnswers={getAnswers}
+      getTimers={getTimers}
     />
   );
 }

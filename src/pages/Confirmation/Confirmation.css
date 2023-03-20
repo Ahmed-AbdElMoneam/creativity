@@ -1,4 +1,4 @@
-.settings__layout{
+.confirmation__layout{
   width: 100vw;
   height: 100vh;
   background-image: radial-gradient(
@@ -50,16 +50,23 @@
     transparent 6%,
     transparent 100%
   ),
-  linear-gradient(90deg, #fff, #fff);
+  linear-gradient(90deg, #6A5AE0, #785FDC);
 }
 
-.settings__logout{
-  font-size: 28px;
-  color: #EB5757;
+.confirmation__content__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 40vh;
 }
-.settings__logout:hover{
-  color: #fd8585;
-}
-.settings__logout:focus{
-  color: #c53a3a;
+
+.confirmation__footer__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 65px;
 }

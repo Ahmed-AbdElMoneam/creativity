@@ -1,28 +1,35 @@
 .header__logo{
   display: inline-block;
-  margin: 2px 32px 0 0;
+  margin-top: 2px;
 }
 
 .header__title{
-  height: 100%;
+  height: 98px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-right: 3vw;
 }
 
 .header__title__span__ar{
-  font-size: 42px;
-  line-height: 30px;
+  font-size: 3.1vw;
+  line-height: 1vh;
   font-family: 'Circle Book';
 }
 
 .header__title__span__en{
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.8vw;
+  line-height: 1vh;
   font-family: 'Circle';
 }
 
 .header__title__span__letter{
-  font-size: 24px;
+  font-size: 1.8vw;
   font-family: 'Circle Book';
+}
+/***********************************Mobile View********************************************/
+@media screen and (max-width: 1000px) {
+  .logo__title{
+    visibility: hidden;
+  }
 }

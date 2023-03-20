@@ -73,8 +73,8 @@ const Register = () => {
 				<img
 					src={config.APP_LOGO_PATH}
 					alt="LOGO"
-					width="200"
-					height="200"
+					width="220"
+					height="220"
 					style={{ marginRight: '1rem' }}
 				/>
 			</div>

@@ -11,26 +11,25 @@
 }
 
 .auth__logo {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
+  margin: 1.5vh auto;
 }
 
 .login__card {
-  width: 30vw;
+  width: 32vw;
+  min-width: 350px;
+  margin-bottom: 1.1vh;
 }
 
 .login__card .ant-card-head-title{
-  font-size: 1.5vw;
+  font-size: 24px;
 }
 
 .login__card .ant-card-body{
   padding-bottom: 0;
 }
 
-.login__props .ant-form-item-control-input-content{
-  display: flex;
-  justify-content: space-between;
+.login__props span{
+  font-size: 18px;
 }
 
 .login-form .login-form-button{

@@ -1,6 +1,5 @@
 .home__layout{
   width: 100vw;
-  height: 100vh;
   overflow-y: auto;
   background-image: url(../../../public/images/bg.png);
   background-position: bottom;
@@ -8,9 +7,10 @@
 }
 
 .home__content{
-  width: 95vw;
+  width: 90vw;
   margin: 0px auto;
   color: white;
+  margin-bottom: 1.2vh;
 }
 
 .home__main__title{
@@ -25,19 +25,24 @@
 }
 
 .home__footer__wrapper{
-  width: 30vw;
+  width: 35vw;
+  min-width: 350px;
   text-align: center;
   padding: 0;
   border-radius: 15px;
-  margin: 5px auto;
+  margin: 20px auto;
+  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.46);
 }
 
 .home__footer .ant-card-head-title{
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .home__footer__button{
-  width: 300px;
+  width: 25vw;
+  min-width: 300px;
   height: 110px;
 }
 
@@ -46,5 +51,5 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  line-height: 30px;
+  line-height: 22px;
 }
